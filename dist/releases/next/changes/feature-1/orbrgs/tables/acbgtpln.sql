@@ -1,0 +1,53 @@
+-- liquibase formatted sql
+-- changeset ORBRGS:1756617448073 stripComments:false  logicalFilePath:feature-1\orbrgs\tables\acbgtpln.sql runAlways:false runOnChange:false replaceIfExists:true failOnError:true
+-- sqlcl_snapshot src/database/orbrgs/tables/acbgtpln.sql:null:12d9c2fdf043f8c036e2b0d507819171a8c3a4fd:create
+
+create table orbrgs.acbgtpln (
+    compcode            varchar2(3 byte) not null enable,
+    docttype            varchar2(2 byte) not null enable,
+    subttype            number not null enable,
+    docnumbr            varchar2(30 byte) not null enable,
+    doctdate            date not null enable,
+    budget_year_from    date,
+    budget_year_to      date,
+    budget_plan_from    date,
+    budget_plan_to      date,
+    achead              varchar2(30 byte),
+    acname              varchar2(100 byte),
+    remaining_amount    number,
+    budget_amount       number,
+    total_budget_amount number,
+    remarks             varchar2(300 byte),
+    statuscd            varchar2(30 byte) default 'NEW',
+    oprstamp            varchar2(50 byte),
+    timstamp            date default systimestamp,
+    modifyby            varchar2(30 byte),
+    modifydt            date,
+    updoctyp            varchar2(2 byte),
+    upsubtyp            number,
+    updocnum            varchar2(30 byte),
+    updocdte            date,
+    updocsrl            varchar2(6 byte),
+    dwdoctyp            varchar2(2 byte),
+    dwsubtyp            number,
+    dwdocnum            varchar2(30 byte),
+    dwdocdte            date,
+    dwdocsrl            varchar2(6 byte),
+    raisedby            varchar2(50 byte),
+    apprvdby            varchar2(50 byte),
+    apprdate            date,
+    reqddate            date,
+    msfcamnt            number,
+    currcode            varchar2(3 byte),
+    excgrate            number,
+    mslcamnt            number,
+    postflag            varchar2(1 byte) default 'N',
+    warecode            varchar2(6 byte),
+    costcode            varchar2(10 byte),
+    cost_center_name    varchar2(100 byte),
+    budget_purpose      varchar2(100 byte),
+    yearcode            varchar2(4 byte),
+    mnthcode            number
+)
+no inmemory;
+

@@ -1,0 +1,50 @@
+-- liquibase formatted sql
+-- changeset ORBRGS:1756617450618 stripComments:false  logicalFilePath:feature-1\orbrgs\tables\actrtmpl.sql runAlways:false runOnChange:false replaceIfExists:true failOnError:true
+-- sqlcl_snapshot src/database/orbrgs/tables/actrtmpl.sql:null:807d93861419200cc30fb961b1daab91935732a3:create
+
+create table orbrgs.actrtmpl (
+    compcode varchar2(3 byte) not null enable,
+    docttype varchar2(2 byte) not null enable,
+    subttype number not null enable,
+    docnumbr varchar2(30 byte) not null enable,
+    doctdate date,
+    docduedt date,
+    serlnumb number,
+    acctcode varchar2(10 byte),
+    costcode varchar2(10 byte),
+    subledcd varchar2(6 byte),
+    trancode varchar2(3 byte),
+    naration varchar2(40 byte),
+    dbcrcode varchar2(1 byte),
+    currcode varchar2(3 byte),
+    excgrate number,
+    jvfcamnt number,
+    jvlcamnt number,
+    orgamtfc number,
+    orgamtlc number,
+    adjamtfc number,
+    adjamtlc number,
+    orgbakfc number,
+    orgbaklc number,
+    refdocno varchar2(15 byte),
+    refdocdt date,
+    refdocty varchar2(2 byte),
+    refdcsty number,
+    refdcnum varchar2(15 byte),
+    refrdate date,
+    intdocty varchar2(2 byte),
+    intdcsty number,
+    intdocno varchar2(8 byte),
+    intdocdt date,
+    ctrlmcro varchar2(2 byte),
+    statcode varchar2(1 byte),
+    postdate date,
+    purgflag varchar2(1 byte),
+    transerl number,
+    allcfrez varchar2(1 byte),
+    oprstamp varchar2(50 byte) not null enable,
+    timstamp date not null enable,
+    modifydt date
+)
+no inmemory;
+

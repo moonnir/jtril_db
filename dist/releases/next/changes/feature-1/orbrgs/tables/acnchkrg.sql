@@ -1,0 +1,53 @@
+-- liquibase formatted sql
+-- changeset ORBRGS:1756617449674 stripComments:false  logicalFilePath:feature-1\orbrgs\tables\acnchkrg.sql runAlways:false runOnChange:false replaceIfExists:true failOnError:true
+-- sqlcl_snapshot src/database/orbrgs/tables/acnchkrg.sql:null:f222228b54af26a5b5a14d6bea9f918824f38135:create
+
+create table orbrgs.acnchkrg (
+    compcode varchar2(3 byte) not null enable,
+    bankcode varchar2(10 byte) not null enable,
+    bankname varchar2(40 byte),
+    bankbrch varchar2(40 byte),
+    ptyactcd varchar2(20 byte),
+    bnkrefno varchar2(15 byte),
+    bnkrefdt date,
+    reconflg varchar2(1 byte),
+    futrflg1 varchar2(1 byte),
+    cheknumb varchar2(20 byte),
+    chekdate date,
+    chekamnt number,
+    chekfavr varchar2(65 byte),
+    chekstat varchar2(1 byte),
+    chkdtype varchar2(2 byte),
+    chkstype number,
+    chkrunno varchar2(8 byte),
+    chkrundt date,
+    docttype varchar2(2 byte),
+    subttype number,
+    docnumbr varchar2(30 byte),
+    doctdate date,
+    acctcode varchar2(10 byte),
+    partycde varchar2(6 byte),
+    currcode varchar2(3 byte),
+    excgrate number,
+    dbcrcode varchar2(1 byte),
+    naration varchar2(40 byte),
+    refcomcd varchar2(3 byte),
+    refdctyp varchar2(2 byte),
+    refsttyp number,
+    refdocno varchar2(8 byte),
+    refdocdt date,
+    chkprflg varchar2(1 byte),
+    dcndtype varchar2(2 byte),
+    dcnstype number,
+    dcndnumb varchar2(8 byte),
+    dcnddate date,
+    pcndtype varchar2(2 byte),
+    pcnstype number,
+    pcndnumb varchar2(8 byte),
+    pcnddate date,
+    oprstamp varchar2(50 byte) not null enable,
+    timstamp date not null enable,
+    modifydt date
+)
+no inmemory;
+
